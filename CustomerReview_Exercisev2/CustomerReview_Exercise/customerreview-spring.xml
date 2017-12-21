@@ -29,6 +29,10 @@
 	<alias alias="customerReviewDao" name="defaultCustomerReviewDao"/>
 	<bean id="defaultCustomerReviewDao" class="de.hybris.platform.customerreview.dao.impl.DefaultCustomerReviewDao" parent="abstractItemDao" scope="tenant"/>
 
+ 
+  <!-- bean 
+   Provide a way to get a product’s total number of customer reviews whose ratings are within a given range (inclusive).
+  -->
   <alias alias="customerReviewServiceProduct" name="ProductExtendedDefaultCustomerReviewService"/>
   <bean id="ProductExtendedDefaultCustomerReviewService" 
   class="de.hybris.platform.customerreview.impl.ProductExtendedDefaultCustomerReviewService" 
