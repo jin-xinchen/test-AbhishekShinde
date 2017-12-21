@@ -31,13 +31,19 @@ import org.springframework.beans.factory.annotation.Required;
  
  
  
- 
+
  public class ProductExtendedDefaultCustomerReviewService
    extends DefaultCustomerReviewService
  {
    private CustomerReviewDao customerReviewDao;
    
- 
+   /**
+    * a way to get a product’s total number of customer reviews whose ratings are within a given range (inclusive).
+    *
+    * @param product
+    * @param rating
+    * @return Integer  A product’s total number.
+    */
    public Integer getTotalNumberOfProductReviewsWithinRating(ProductModel product, Double rating)
    {
      return CustomerReviewManager.getInstance().getTotalNumberOfProductReviewsWithinRating(
