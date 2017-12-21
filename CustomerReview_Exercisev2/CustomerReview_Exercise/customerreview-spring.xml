@@ -1,0 +1,8 @@
+
+  <alias alias="customerReviewServiceProduct" name="ProductExtendedDefaultCustomerReviewService"/>
+  <bean id="ProductExtendedDefaultCustomerReviewService" 
+  class="de.hybris.platform.customerreview.impl.ProductExtendedDefaultCustomerReviewService" 
+  parent="DefaultCustomerReviewService" scope="tenant">
+    <property name="customerReviewDao" ref="customerReviewDao"/>
+  </bean>
+
